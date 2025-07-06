@@ -1,4 +1,72 @@
-.test{
-    border: solid 5px black ;
-    background-image: image-set(href = "sources/menu/Logo.jpg");
+.body-container {
+    font-family: 'Montserrat', sans-serif;
+    background: #FFFFFF;
+    min-height: 100vh;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.nav-container {
+    display: flex;
+    background: #222222;
+    justify-content: start;
+    align-items: center;
+    height: 80px;
+}
+
+
+
+
+.nav-container .sign{
+    justify-content: end;  
+}
+
+
+
+
+.navbar {
+    display: flex;
+    align-items: start;
+    gap: 0 20px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 503px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 585px;
+    max-height: 224px;
+}
+
+.input-field label {
+    flex-wrap: wrap;
+}
+
+.input-field h1 {
+    font-weight: 600;
+    font-size: 50px;
+    margin: 0 auto;
+    max-width: 566px;
+}
+
+.input-bar {
+    display: flex;
+    border: 2px solid black;
+    border-radius: 8px;
+    background: white;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.image {
+    max-width: 710px;
+    max-height: 430px;
 }
