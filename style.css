@@ -138,15 +138,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    border: black solid 5px;
+    justify-content: space-evenly;
+    min-height: 510px;
 }
 
 .listing-items-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     height: 332px;
-    border: solid black 4px;
+    width: 1198px;
+}
+
+.listing-container h1{
+    font-size: 32px;
 }
 
 .apartment-item {
@@ -154,51 +158,110 @@
     height: 332px;
     display: flex;
     flex-direction: column;
-    border: black solid 3px;
 }
 
 .apartment-visual {
-    height: 187px;
+    display: flex;
+    justify-content: space-between;
+    min-height: 187px;
     width: 378;
-    border: black solid 2px;
+    background-clip: border-box;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 6px 6px 0 0;
+}
+
+.vis-1 {
     background-image: url("assets/body/featured-list/first-section/apartment1.png");
 }
-.apartment-image {
-    height: 187px;
-    width: 378;
-    object-fit: none;
+
+.vis-2 {
+    background-image: url("assets/body/featured-list/first-section/apartment2.png");
+    background-size: 100% 135%;
+    background-position: bottom;
 }
 
-.info1{
+.vis-3 {
+    background-image: url("assets/body/featured-list/first-section/apartment3.png");
+    background-size: 100% 110%;
+    background-position: bottom;
+}
+
+
+.status {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+.owner {
+    display: flex;
+    align-items: end;
+}
+
+.bar-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.bar-2 {
     display: flex;
     flex-direction: column;
+    align-items: start;
 }
 
-.bar-1{
+.bar-2 h3 {
+    margin: 0 0;
+}
+
+.bar-3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 82px;
 }
 
-.bar-1 div{
+.bar-4 {
     display: flex;
+    margin: 12px 0px 15px 0px;
 }
 
-.bar-3{
-    display: flex;
-    padding: 0 10px;
-}
-
-.bar-3 img{
+.bar-4 img {
     margin: 0 15px 0 5px;
 }
 
-.info2{
+.info1 {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    padding: 15px 15px;
+    height: 100px;
 }
 
-.info2-interaction{
+.info1 p {
+    opacity: 0.5;
+    margin: 0 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: #222222;
+}
+
+.bar-3 p {
+    font-size: 12px;
+    margin: 0 0;
+}
+
+.info2 {
+    display: flex;
+    padding: 0px 15px;
+    height: 47px;
+    justify-content: space-between;
+    align-items: center;
+    border-top: solid 1px #D8D8D8;
+}
+
+.info2-interaction {
     display: flex;
     justify-content: end;
     gap: 0 10px;
