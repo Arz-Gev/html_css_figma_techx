@@ -6,6 +6,9 @@
     margin: 0 auto;
 }
 
+
+/* HEADER - NAVBAR*/
+
 .header-container {
     display: flex;
     background: #222222;
@@ -62,6 +65,8 @@
 }
 
 
+/* LISTINGS SEARCH */
+
 .search-container {
     display: flex;
     justify-content: space-between;
@@ -98,7 +103,7 @@
     font-size: 16px;
     font-weight: 400;
     border-radius: 50px;
-    box-shadow: 0 2px 6px 1px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.1);
 }
 
 .input-bar input {
@@ -124,4 +129,39 @@
     max-width: 710px;
     max-height: 430px;
     margin-right: 10px;
+}
+
+
+/* FUTURED LIST */
+
+.listing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.listing {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    gap: 0 10px;
+}
+.listing li {
+    display: flex;
+    align-items: center;
+}
+.image-swap {
+    display: flex;
+    align-items: center;
+    background-image: url("assets/body/featured-list/forth-section/Oval.svg");
+    background-size: cover;
+    transition: background-image 0.05s ease-in-out;
+    height: 11px;
+    width: 11px;
+}
+
+.image-swap:hover {
+    background-image: url("assets/body/featured-list/forth-section/Oval-green.svg");
+    transform: scale(1.2);
 }
