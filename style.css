@@ -2,24 +2,28 @@
     font-family: 'Montserrat', sans-serif;
     background: #FFFFFF;
     min-height: 100vh;
-    max-width: 1440px;
+    width: clamp(768px, 100%, 1440px);
     margin: 0 auto;
 }
 
+:root {
+    --min: 1.875px;
+    --num: 14.4px;
+}
 
 /* HEADER - NAVBAR*/
 
 .header-container {
     display: flex;
     background: #222222;
-    justify-content: space-evenly;
     align-items: center;
-    height: 80px;
-    gap: 0 20px;
+    height: clamp(42px, 5.5vw, 80px);
+    padding-left: clamp(17px, 2.2vw, 32px);
+    padding-right: clamp(32px, 4.1vw, 60px);
 }
 
-.logo {
-    margin-left: 2%;
+.logo img {
+    width: clamp(64px, 7.8vw, 120px);
 }
 
 .nav-container {
@@ -27,20 +31,19 @@
     justify-content: start;
     align-items: center;
     flex-grow: 1;
-    flex-wrap: wrap;
-    margin-right: 3%;
+    flex-wrap: nowrap;
 }
 
-.nav {
-    display: flex;
-    align-items: center;
-    display: inline;
+.nav-item {
+    font-size: clamp(7.5px, 1vw, 14px);
 }
 
 .navbar {
     list-style-type: none;
     display: flex;
-    gap: 0 20px;
+    column-gap: clamp(10px, 1.4vw, 20px);
+    margin-left: clamp(27px, 3vw, 52px);
+    padding-left: 0;
 }
 
 .navbar a {
@@ -57,7 +60,7 @@
     display: flex;
     justify-content: end;
     align-items: center;
-    gap: 0 20px;
+    column-gap: clamp(10px, 1.4vw, 20px);
 }
 
 .sign a {
@@ -68,8 +71,8 @@
 .sign-up {
     display: flex;
     justify-content: center;
-    min-width: 117px;
-    min-height: 40px;
+    width: clamp(62px, 8vw, 117px);
+    aspect-ratio: 117/40;
     background: #B2D235;
     border-radius: 20px;
 }
@@ -79,61 +82,44 @@
 
 .search-container {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-evenly;
     align-items: center;
-    min-height: 503px;
+    height: clamp(268px, 35vw, 503px);
 }
 
 .input-field-container {
     display: flex;
-    flex-grow: 1;
-}
-
-.input-field {
-    flex-grow: 1;
-    display: flex;
     flex-direction: column;
-    align-items: start;
+    width: clamp(301px, 39vw, 566px);
+    align-items: center;
     justify-content: space-between;
-    width: 585px;
-    height: 224px;
-    padding-left: 25px;
+    margin-right: clamp(55px, 7vw, 103px);
+    margin-left: clamp(27px, 3.5vw, 50px);
 }
 
-.input-bar {
-    justify-content: space-between;
-    display: flex;
-    min-width: 343px;
-    max-width: 541px;
-    width: 100%;
-    height: 70px;
-    border-radius: 8px;
-    background: #FFFFFF;
-    font-size: 16px;
-    font-weight: 400;
-    border-radius: 50px;
-    box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.1);
-
-}
-
-.search-bar {
-    flex-grow: 1;
-}
-
-.pretty-image {
-    max-width: 710px;
-    max-height: 430px;
-    margin: 0 29px;
+.pretty-image img {
+    width: clamp(378px, 49vw, 710px);
+    margin: 0 clamp(2px,1vw,10px) 0 0;
 }
 
 .label {
     font-weight: 600;
-    font-size: 50px;
-    max-width: 566px;
-    min-width: 316px;
-    max-height: 122px;
-    min-height: 68px;
+    font-size: clamp(25px, 3vw, 50px);
+    margin: 0 0 clamp(17px, 2vw, 32px) 0;
+}
+
+.input-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 8px;
+    background: #FFFFFF;
+    border-radius: 50px;
+    box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar {
+    flex-grow: 1;
 }
 
 .input-bar input {
@@ -195,6 +181,7 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     border-radius: 6px 6px 0 0;
+    padding: 16px 16px 16px 10px;
 }
 
 .vis-1 {
@@ -232,22 +219,25 @@
     align-items: center;
     width: 62px;
     height: 21px;
-    margin: 16px auto auto 16px;
+    margin: 0 auto auto 10px;
     border-radius: 5px;
     background-color: #FE5D26;
 }
 
-.status-second{
+.status-second {
     background-color: #B2D235;
-}
-
-.apart3{
-    margin-left: 10px;
 }
 
 .owner {
     display: flex;
     align-items: end;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: auto;
+    background-image: url("assets/body/featured-list/first-section/customer.png");
+    background-position: 100% 25%;
+    background-size: cover;
 }
 
 .bar-1 {
