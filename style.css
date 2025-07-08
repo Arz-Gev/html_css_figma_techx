@@ -1,3 +1,7 @@
+html {
+    background: black;
+}
+
 .body-container {
     font-family: 'Montserrat', sans-serif;
     background: #FFFFFF;
@@ -9,7 +13,16 @@
 :root {
     --min: 1.875px;
     --num: 14.4px;
+    --base-green: #B2D235;
+    --base-red: #FE5D26;
+    --base-black: #222222;
+    --exist: black solid 1px;
 }
+
+.section-heading {
+    font-size: clamp(17.1px, 2.2vw, 32.0px);
+}
+
 
 /* HEADER - NAVBAR*/
 
@@ -91,6 +104,8 @@
     display: flex;
     flex-direction: column;
     width: clamp(301px, 39vw, 566px);
+    aspect-ratio: 556/224;
+    height: auto;
     align-items: center;
     justify-content: space-between;
     margin-right: clamp(55px, 7vw, 103px);
@@ -99,7 +114,7 @@
 
 .pretty-image img {
     width: clamp(378px, 49vw, 710px);
-    margin: 0 clamp(2px,1vw,10px) 0 0;
+    margin: 0 clamp(2px, 1vw, 10px) 0 0;
 }
 
 .label {
@@ -131,9 +146,11 @@
 }
 
 .loc-icon {
-    margin: auto 0.7em;
-    width: 16px;
-    height: 21px;
+    margin: auto clamp(5.0px, 0.8vw, 12.0px) auto clamp(12.8px, 1.7vw, 24.0px)
+}
+
+.loc-icon img {
+    width: clamp(8.5px, 1.1vw, 16.0px);
 }
 
 .input-bar button {
@@ -143,6 +160,10 @@
     margin: 5px 2px 4px 0px;
 }
 
+.input-bar button img {
+    width: clamp(29.9px, 3.9vw, 56.0px);
+}
+
 /* FUTURED LIST */
 
 .listing-container {
@@ -150,23 +171,21 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    min-height: 510px;
+    height: clamp(272px, 35.4vw, 510px);
 }
 
 .listing-items-container {
     display: flex;
     justify-content: space-between;
-    height: 332px;
-    width: 1198px;
-}
-
-.listing-container h1 {
-    font-size: 32px;
+    width: clamp(638.9px, 83.2vw, 1198.0px);
+    aspect-ratio: 1198/332;
+    height: auto;
 }
 
 .apartment-item {
-    width: 378px;
-    height: 332px;
+    width: clamp(201.6px, 26.3vw, 379.0px);
+    aspect-ratio: 379/332;
+    height: auto;
     display: flex;
     flex-direction: column;
 }
@@ -174,14 +193,16 @@
 .apartment-visual {
     display: flex;
     justify-content: space-between;
-    min-height: 187px;
-    width: 378;
+    width: clamp(188.3px, 24.5vw, 353.0px);
+    aspect-ratio: 379/185;
+    height: auto;
     background-clip: border-box;
     background-origin: border-box;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     border-radius: 6px 6px 0 0;
-    padding: 16px 16px 16px 10px;
+    padding:
+        clamp(8.5px, 1.1vw, 16.0px) clamp(8.5px, 1.1vw, 16.0px) clamp(8.5px, 1.1vw, 16.0px) clamp(5.3px, 0.7vw, 10.0px);
 }
 
 .vis-1 {
@@ -209,7 +230,7 @@
 
 .status p {
     margin: 0 0;
-    font-size: 10px;
+    font-size: clamp(5.3px, 0.7vw, 10.0px);
     color: #FFFFFF;
 }
 
@@ -217,9 +238,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 62px;
-    height: 21px;
-    margin: 0 auto auto 10px;
+    width: clamp(33.1px, 4.3vw, 62.0px);
+    aspect-ratio: 62/21;
+    height: auto;
+    margin: 0 auto auto clamp(5.3px, 1vw, 10.0px);
     border-radius: 5px;
     background-color: #FE5D26;
 }
@@ -231,14 +253,60 @@
 .owner {
     display: flex;
     align-items: end;
-    width: 40px;
-    height: 40px;
+    width: clamp(21.3px, 2.8vw, 40.0px);
+    aspect-ratio: 1/1;
+    height: auto;
     border-radius: 50%;
     margin-top: auto;
     background-image: url("assets/body/featured-list/first-section/customer.png");
     background-position: 100% 25%;
     background-size: cover;
 }
+
+
+.info1 {
+    display: flex;
+    flex-direction: column;
+    padding: clamp(8.0px, 1.0vw, 15.0px) clamp(8.0px, 1.0vw, 15.0px);
+    width: clamp(186.1px, 24.2vw, 349.0px);
+    aspect-ratio: 379/99;
+    height: auto;
+}
+
+.info1 p {
+    opacity: 0.5;
+    margin: 0 0;
+    font-size: clamp(7px, 0.9vw, 13.0px);
+    font-weight: 400;
+    color: #222222;
+}
+
+.info2 {
+    display: flex;
+    padding: 0px clamp(8.0px, 1.0vw, 15.0px);
+    width: clamp(186.1px, 24.2vw, 349.0px);
+    aspect-ratio: 379/46;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    border-top: solid 1px #D8D8D8;
+}
+
+.info2-interaction {
+    display: flex;
+    justify-content: end;
+}
+
+.info2 h3 {
+    font-size: clamp(9.6px, 1.3vw, 19.0px);
+    margin: 0 0;
+    font-weight: 600;
+}
+
+.info2 img {
+    width: clamp(12.8px, 1.7vw, 24.0px);
+}
+
 
 .bar-1 {
     display: flex;
@@ -250,61 +318,34 @@
     display: flex;
     flex-direction: column;
     align-items: start;
+    justify-content: space-between;
+    width: clamp(65.1px, 8.5vw, 122.0px);
+    aspect-ratio: 122/43;
+    height: auto;
 }
 
 .bar-2 h3 {
+    font-size: clamp(9.6px, 1.3vw, 19.0px);
     margin: 0 0;
 }
 
 .bar-3 {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 82px;
+    justify-content: space-between;
+    width: clamp(43.7px, 5.7vw, 82.0px);
+    aspect-ratio: 82/15;
+    height: auto;
 }
 
 .bar-4 {
     display: flex;
-    margin: 12px 0px 15px 0px;
+    margin: clamp(6.9px, 0.9vw, 13.0px) 0px clamp(6.9px, 0.9vw, 13.0px) 0px;
 }
 
 .bar-4 img {
-    margin: 0 15px 0 5px;
-}
-
-.info1 {
-    display: flex;
-    flex-direction: column;
-    padding: 15px 15px;
-    height: 100px;
-}
-
-.info1 p {
-    opacity: 0.5;
-    margin: 0 0;
-    font-size: 14px;
-    font-weight: 400;
-    color: #222222;
-}
-
-.bar-3 p {
-    font-size: 12px;
-    margin: 0 0;
-}
-
-.info2 {
-    display: flex;
-    padding: 0px 15px;
-    height: 47px;
-    justify-content: space-between;
-    align-items: center;
-    border-top: solid 1px #D8D8D8;
-}
-
-.info2-interaction {
-    display: flex;
-    justify-content: end;
-    gap: 0 10px;
+    margin: 0 clamp(8.0px, 1.0vw, 15.0px) 0 clamp(2.7px, 0.3vw, 5.0px);
+    width: clamp(8.0px, 1.0vw, 15.0px);
 }
 
 
@@ -312,7 +353,8 @@
     display: flex;
     justify-content: center;
     list-style-type: none;
-    gap: 0 10px;
+    gap: 0 clamp(5.3px, 0.7vw, 10.0px);
+    ;
 }
 
 .listing li {
@@ -325,9 +367,9 @@
     align-items: center;
     background-image: url("assets/body/featured-list/forth-section/Oval.svg");
     background-size: cover;
-    transition: background-image 0.05s ease-in-out;
-    height: 11px;
-    width: 11px;
+
+    height: clamp(5.9px, 0.8vw, 11.0px);
+    width: clamp(5.9px, 0.8vw, 11.0px);
 }
 
 .image-swap:hover {
