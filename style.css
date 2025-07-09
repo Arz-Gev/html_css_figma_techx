@@ -20,6 +20,7 @@ html {
 }
 
 .section-heading {
+    font-weight: 600;
     font-size: clamp(17.1px, 2.2vw, 32.0px);
     margin: clamp(17.1px, 2.2vw, 32.0px) 0;
     color: var(--base-black);
@@ -27,6 +28,10 @@ html {
 
 a {
     text-decoration: none;
+}
+
+ul{
+    padding: 0;
 }
 
 
@@ -206,7 +211,6 @@ a {
     background-origin: border-box;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-
     border-radius: 6px 6px 0 0;
     padding:
         clamp(8.5px, 1.1vw, 16.0px) clamp(8.5px, 1.1vw, 16.0px) clamp(8.5px, 1.1vw, 16.0px) clamp(5.3px, 0.7vw, 10.0px);
@@ -404,7 +408,6 @@ a {
     list-style-type: none;
     gap: 0 clamp(19.2px, 2.5vw, 36.0px);
     font-size: clamp(8.5px, 1.1vw, 16.0px);
-    padding: 0;
     text-decoration: none;
     margin: 0 0 clamp(17.1px, 2.2vw, 32.0px) 0;
 }
@@ -423,15 +426,11 @@ a {
 
 .events-items-container {
     display: flex;
-
-    justify-content: center;
-    /*   <--- should change value*/
-
+    justify-content: space-evenly;
     width: clamp(725.3px, 94.4vw, 1360.0px);
     aspect-ratio: 1360/306;
     height: auto;
 
-    border: var(--exist)
 }
 
 .event-item {
@@ -439,8 +438,7 @@ a {
     aspect-ratio: 320/306;
     height: auto;
     border-radius: 7px;
-
-    border: var(--exist)
+    box-shadow: 0px 1px 9px 0px #22222229;
 }
 
 .event-item-visual {
@@ -450,22 +448,11 @@ a {
     height: auto;
     align-items: start;
     justify-content: space-between;
+    border-radius: 7px 7px 0 0;
     background-image: url(assets/body/events/event1.png);
     background-repeat: no-repeat;
     background-size: 100% 105%;
     background-position: bottom;
-    background-origin: border-box;
-    background-clip: border-box;
-}
-
-.event-item-info {
-    width: clamp(153.6px,20.0vw,288.0px);
-    aspect-ratio: 288/55;
-    height: auto;
-    margin: clamp(8.5px,1.1vw,16.0px) clamp(8.5px,1.1vw,16.0px);
-
-
-    border: var(--exist)
 }
 
 .event-type {
@@ -481,7 +468,10 @@ a {
     color: white;
     font-weight: 400;
     font-size: clamp(5.3px, 0.7vw, 10.0px);
+}
 
+.event-type-2 {
+    background-color: var(--base-green);
 }
 
 .event-date {
@@ -495,7 +485,67 @@ a {
     background-color: var(--base-green);
     border-radius: 3px;
     color: white;
-    font-size: clamp(11.7px,1.5vw,22.0px);
+    font-size: clamp(11.7px, 1.5vw, 22.0px);
     font-weight: 400;
     text-align: center;
+}
+
+.event-item-info {
+    display: flex;
+    justify-content: space-between;
+    width: clamp(153.6px, 20.0vw, 288.0px);
+    aspect-ratio: 288/55;
+    height: auto;
+    margin: clamp(8.5px, 1.1vw, 16.0px) clamp(8.5px, 1.1vw, 16.0px);
+    background-color: #FAFAFA;
+}
+
+.event-name {
+    font-weight: 400;
+    font-size: clamp(8.5px, 1.1vw, 16.0px);
+    color: #222220;
+}
+
+.event-data {
+    font-weight: 400;
+    font-size: clamp(6.4px, 0.8vw, 12.0px);
+    opacity: 50%;
+}
+
+.event-info-bar2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    width: clamp(29.9px, 3.9vw, 56.0px);
+    aspect-ratio: 56/55;
+    height: auto;
+}
+
+.event-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: clamp(29.9px, 3.9vw, 56.0px);
+}
+
+.event-buttons img {
+    width: clamp(12.8px, 1.7vw, 24.0px);
+}
+
+.event-people-data {
+    display: flex;
+    justify-content: space-between;
+    width: clamp(23.5px, 3.1vw, 44.0px);
+    aspect-ratio: 44/15;
+    height: auto;
+}
+
+.event-people-data img {
+    width: clamp(9.6px, 1.3vw, 18.0px);
+}
+
+.event-people-count {
+    font-weight: 400;
+    color: var(--base-green);
+    font-size: clamp(6.4px, 0.8vw, 12.0px);
 }
