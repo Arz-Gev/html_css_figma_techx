@@ -5,8 +5,8 @@ html {
 .body-container {
     font-family: 'Montserrat', sans-serif;
     background: #FFFFFF;
-    height: 20000px;
     width: clamp(768px, 100%, 1440px);
+    height: auto;
     margin: 0 auto;
 }
 
@@ -48,7 +48,7 @@ ul {
 }
 
 .logo img {
-    width: clamp(64px, 7.8vw, 120px);
+    width: clamp(60px, 7.8vw, 120px);
 }
 
 .nav-container {
@@ -67,7 +67,7 @@ ul {
     list-style-type: none;
     display: flex;
     column-gap: clamp(10px, 1.4vw, 20px);
-    margin-left: clamp(27px, 3vw, 52px);
+    margin-left: clamp(23px, 3vw, 52px);
     padding-left: 0;
 }
 
@@ -95,12 +95,11 @@ ul {
 .sign-up {
     display: flex;
     justify-content: center;
-    width: clamp(62px, 8vw, 117px);
+    width: clamp(50px, 8vw, 117px);
     aspect-ratio: 117/40;
     background: #B2D235;
     border-radius: 20px;
 }
-
 
 /* LISTINGS SEARCH */
 
@@ -130,8 +129,8 @@ ul {
 
 .label {
     font-weight: 600;
-    font-size: clamp(25px, 3vw, 50px);
-    margin: 0 0 clamp(17px, 2vw, 32px) 0;
+    font-size: clamp(23px, 3vw, 50px);
+    margin: 0 0 clamp(16px, 2vw, 32px) 0;
 }
 
 .input-bar {
@@ -145,6 +144,11 @@ ul {
 
 .input-bar input {
     flex-grow: 1;
+    font-size: clamp(8.5px, 1.1vw, 16.0px);
+    width: auto;
+    background-color: transparent;
+    border: none;
+    font-weight: 400;
 }
 
 .input-bar input:focus {
@@ -156,16 +160,8 @@ ul {
     font-size-adjust: clamp(8.5px, 1.5vw, 17.0px);
 }
 
-.input-bar input {
-    width: auto;
-    background-color: transparent;
-    border: none;
-    font-weight: 400;
-    font-size: 16px;
-}
-
 .loc-icon {
-    margin: auto clamp(5.0px, 0.8vw, 12.0px) auto clamp(12.8px, 1.7vw, 24.0px)
+    margin: auto clamp(4.0px, 0.8vw, 12.0px) auto clamp(12.8px, 1.7vw, 24.0px)
 }
 
 .loc-icon img {
@@ -176,7 +172,7 @@ ul {
     background-color: transparent;
     border: none;
     border-radius: 30px;
-    margin: 5px 2px 4px 0px;
+    margin: 0.5vw 0.25vw 0.5vw 0px;
 }
 
 .input-bar button img {
@@ -417,9 +413,6 @@ ul {
     background-image: url("assets/body/featured-list/forth-section/Oval-green.svg");
     transform: scale(1.2);
 }
-
-
-
 
 /*  EVENTS SECTION   */
 
@@ -710,3 +703,142 @@ ul {
 }
 
 /* EXPLORE OUR LISTIONG */
+
+.explore-listings-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: clamp(768.0px, 100.0vw, 1440.0px);
+    aspect-ratio: 1440/668;
+    height: auto;
+    background-color: var(--fancy-white);
+
+    border: var(--exist)
+}
+
+.explore-listings-container h2 {
+    margin: 0 0;
+}
+
+.cities-container {
+    width: clamp(730.7px, 95.1vw, 1370.0px);
+    aspect-ratio: 1370/533;
+    height: auto;
+
+    border: var(--exist)
+}
+
+/* CLAIM YOUR ADDRESS */
+
+.address-claim-container {
+    width: clamp(768.0px, 100.0vw, 1440.0px);
+    aspect-ratio: 1440/264;
+    height: auto;
+    background-image: url(assets/body/map/map.svg);
+    background-clip: border-box;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.address-form-container {
+    width: clamp(213.3px, 27.8vw, 400.0px);
+    aspect-ratio: 400/130;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* JOIN US */
+
+.join-us {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: clamp(768.0px, 100.0vw, 1440.0px);
+    aspect-ratio: 1440/70;
+    height: auto;
+    background-color: var(--base-green);
+}
+
+.join-us-text {
+    text-align: end;
+    width: clamp(355.7px, 46.3vw, 667.0px);
+    aspect-ratio: 667/27;
+    font-size: clamp(11.7px, 1.5vw, 22.0px);
+    font-weight: 500;
+    color: white;
+}
+
+.join-us img {
+    width: clamp(40.5px, 5.3vw, 76.0px);
+    aspect-ratio: 76/38;
+    height: auto;
+    margin-left: clamp(4.3px,0.6vw,8.0px);
+}
+
+.join-us-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: clamp(50px, 8vw, 117px);
+    aspect-ratio: 117/40;
+    background: white;
+    color: var(--base-black);
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: clamp(7.5px, 1vw, 12px);
+    margin: 0 auto;
+}
+
+/* FOOTER */
+
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: clamp(768.0px,100.0vw,1440.0px);
+    aspect-ratio: 1440/390;
+    height: auto;
+    background-color: #F5F5F5;
+}
+
+.social-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: clamp(768.0px,100.0vw,1440.0px);
+    aspect-ratio: 1440/97;
+    height: auto;
+}
+
+.social-links img{
+    width: clamp(16.0px,2.1vw,30.0px);
+    margin: 0 clamp(4.3px,0.6vw,8.0px);;
+}
+
+.footer-main{
+    width: clamp(582.9px,75.9vw,1093.0px);
+    aspect-ratio: 1093/171;
+    height: auto;
+
+    border:var(--exist)
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: clamp(768.0px,100.0vw,1440.0px);
+    aspect-ratio: 1440/82;
+    height: auto;
+    background-color: var(--base-black);
+    font-size: clamp(8.5px,1.1vw,16.0px);
+    font-weight: 400;
+    color: white;
+}
