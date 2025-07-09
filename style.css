@@ -25,6 +25,10 @@ html {
     color: var(--base-black);
 }
 
+a {
+    text-decoration: none;
+}
+
 
 /* HEADER - NAVBAR*/
 
@@ -62,7 +66,6 @@ html {
 }
 
 .navbar a {
-    text-decoration: none;
     color: #FFFFFF;
 }
 
@@ -352,15 +355,16 @@ html {
     width: clamp(8.0px, 1.0vw, 15.0px);
 }
 
-.listing {
+.listing-navigation {
     display: flex;
     justify-content: center;
     list-style-type: none;
     gap: 0 clamp(5.3px, 0.7vw, 10.0px);
     padding: 0;
+    margin: clamp(17.1px, 2.2vw, 32.0px) 0;
 }
 
-.listing li {
+.listing-navigation li {
     display: flex;
     align-items: center;
 }
@@ -387,5 +391,69 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: (266.1px, 34.7vw, 499.0px);
+    width: clamp(768.0px, 100.0vw, 1440.0px);
+    aspect-ratio: 1440/499;
+    height: auto;
+    background-color: #FAFAFA;
+}
+
+.events-navigation {
+    display: flex;
+    list-style-type: none;
+    gap: 0 clamp(19.2px, 2.5vw, 36.0px);
+    font-size: clamp(8.5px, 1.1vw, 16.0px);
+    padding: 0;
+    text-decoration: none;
+    margin: 0 0 clamp(17.1px, 2.2vw, 32.0px) 0;
+}
+
+.events-navigation a {
+    color: var(--base-black);
+    opacity: 50%;
+    transition: 0.3s;
+    padding-bottom: clamp(3.2px, 0.4vw, 6.0px);
+}
+
+.events-container a:hover {
+    color: var(--base-green);
+    border-bottom: solid var(--base-green) clamp(1.6px, 0.2vw, 3.0px);
+}
+
+.events-items-container {
+    display: flex;
+
+    justify-content: center;
+    /*   <--- should change value*/
+
+    width: clamp(725.3px, 94.4vw, 1360.0px);
+    aspect-ratio: 1360/306;
+    height: auto;
+
+    border: var(--exist)
+}
+
+.event-item {
+    width: clamp(170.7px, 22.2vw, 320.0px);
+    aspect-ratio: 320/306;
+    height: auto;
+    border-radius: 7px;
+
+    border: var(--exist)
+}
+
+.event-item-visual {
+    width: clamp(170.7px, 22.2vw, 320.0px);
+    aspect-ratio: 320/219;
+    height: auto;
+
+    border: var(--exist)
+}
+
+.event-item-info {
+    width: clamp(170.7px, 22.2vw, 320.0px);
+    aspect-ratio: 320/87;
+    height: auto;
+
+    border: var(--exist)
+
 }
