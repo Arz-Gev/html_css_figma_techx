@@ -267,9 +267,10 @@ html {
 .info1 {
     display: flex;
     flex-direction: column;
-    padding: clamp(8.0px, 1.0vw, 15.0px) clamp(8.0px, 1.0vw, 15.0px);
+    justify-content: center;
+    padding: 0 clamp(8.0px, 1.0vw, 15.0px);
     width: clamp(186.1px, 24.2vw, 349.0px);
-    aspect-ratio: 379/99;
+    aspect-ratio: 349/99;
     height: auto;
 }
 
@@ -298,13 +299,14 @@ html {
 }
 
 .info2 h3 {
-    font-size: clamp(9.6px, 1.3vw, 19.0px);
+    font-size: clamp(9.6px, 1.3vw, 18.0px);
     margin: 0 0;
     font-weight: 600;
+    color: var(--base-black);
 }
 
 .info2 img {
-    width: clamp(12.8px, 1.7vw, 24.0px);
+    width: clamp(13px, 2vw, 25.0px);
 }
 
 
@@ -340,7 +342,7 @@ html {
 
 .bar-4 {
     display: flex;
-    margin: clamp(6.9px, 0.9vw, 13.0px) 0px clamp(6.9px, 0.9vw, 13.0px) 0px;
+    margin: clamp(6.9px, 0.9vw, 13.0px) 0px 0px 0px;
 }
 
 .bar-4 img {
@@ -375,4 +377,13 @@ html {
 .image-swap:hover {
     background-image: url("assets/body/featured-list/forth-section/Oval-green.svg");
     transform: scale(1.2);
+}
+
+
+/*  EVENTS SECTION   */
+
+.events-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
