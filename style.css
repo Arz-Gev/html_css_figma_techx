@@ -201,10 +201,12 @@ a {
     width: clamp(188.3px, 24.5vw, 353.0px);
     aspect-ratio: 379/185;
     height: auto;
+
     background-clip: border-box;
     background-origin: border-box;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+
     border-radius: 6px 6px 0 0;
     padding:
         clamp(8.5px, 1.1vw, 16.0px) clamp(8.5px, 1.1vw, 16.0px) clamp(8.5px, 1.1vw, 16.0px) clamp(5.3px, 0.7vw, 10.0px);
@@ -442,18 +444,58 @@ a {
 }
 
 .event-item-visual {
+    display: flex;
     width: clamp(170.7px, 22.2vw, 320.0px);
     aspect-ratio: 320/219;
     height: auto;
+    align-items: start;
+    justify-content: space-between;
+    background-image: url(assets/body/events/event1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 105%;
+    background-position: bottom;
+    background-origin: border-box;
+    background-clip: border-box;
+}
+
+.event-item-info {
+    width: clamp(153.6px,20.0vw,288.0px);
+    aspect-ratio: 288/55;
+    height: auto;
+    margin: clamp(8.5px,1.1vw,16.0px) clamp(8.5px,1.1vw,16.0px);
+
 
     border: var(--exist)
 }
 
-.event-item-info {
-    width: clamp(170.7px, 22.2vw, 320.0px);
-    aspect-ratio: 320/87;
+.event-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: clamp(33.1px, 4.3vw, 62.0px);
+    aspect-ratio: 62/21;
     height: auto;
+    margin: clamp(8.5px, 1.1vw, 16.0px);
+    background-color: var(--base-red);
+    border-radius: 4px;
+    color: white;
+    font-weight: 400;
+    font-size: clamp(5.3px, 0.7vw, 10.0px);
 
-    border: var(--exist)
+}
 
+.event-date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: clamp(33.6px, 4.4vw, 63.0px);
+    aspect-ratio: 63/57;
+    height: auto;
+    margin: 0 clamp(8.5px, 1.1vw, 16.0px);
+    background-color: var(--base-green);
+    border-radius: 3px;
+    color: white;
+    font-size: clamp(11.7px,1.5vw,22.0px);
+    font-weight: 400;
+    text-align: center;
 }
