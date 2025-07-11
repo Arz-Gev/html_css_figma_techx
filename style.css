@@ -42,6 +42,7 @@ button {
     justify-content: center;
 }
 
+
 /* HEADER - NAVBAR*/
 .menue {
     display: none;
@@ -510,8 +511,15 @@ button {
 }
 
 @media all and (max-width: 767px) {
+    .listing-container {
+        width: clamp(320.0px, 100.0vw, 768.0px);
+        height: auto;
+    }
+
     .listing-items-container {
         justify-content: center;
+        width: clamp(291.6px, 91.1vw, 699.7px);
+        height: auto;
     }
 }
 
@@ -735,9 +743,27 @@ button {
 }
 
 @media all and (max-width: 767px) {
-    .events-items-container {
-        justify-content: center;
+    .events-container {
+        justify-content: space-evenly;
+        width: clamp(320.0px, 100.0vw, 768.0px);
+        height: auto;
+        aspect-ratio: unset;
     }
+
+    .events-items-container {
+        width: clamp(284.4px, 88.9vw, 682.7px);
+        height: auto;
+        aspect-ratio: unset;
+    }
+
+    .event-item {
+        transform: scale(100vw);
+    }
+
+    .event-item:hover {
+    transform:unset;
+}
+
 }
 
 /* REVERIFI SECTION */
@@ -852,8 +878,6 @@ button {
     .reverifi-container {
         flex-direction: column;
         width: clamp(320.0px, 100.0vw, 768.0px);
-        aspect-ratio: 360/444;
-        height: auto;
     }
 
 }
@@ -1314,7 +1338,7 @@ button {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: clamp(697.8px,218.1vw,1674.7px);
+        height: clamp(697.8px, 218.1vw, 1674.7px);
         aspect-ratio: 785/360;
         height: auto;
     }
